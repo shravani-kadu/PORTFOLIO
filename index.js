@@ -1,6 +1,8 @@
 var typed = new Typed('#element', {
     strings: ['Front End Developer...'],
     typeSpeed: 50,
+    loop:true,
+    loopCount: Infinity
   });
 
   // -------------------------------------------------- Toggle icon navbar----------------------------------------
@@ -73,3 +75,14 @@ async(e) =>{
     }
 }
 )
+let iconEl=document.querySelector('#iconTop');
+document.addEventListener('scroll',()=>{
+  let top = window.scrollY;
+  console.log(top)
+  if(top>70){
+    iconEl.classList.add('show');
+  }else{
+    iconEl.classList.remove('show');
+  }
+
+})
